@@ -845,7 +845,7 @@ footer {
 
 @media (max-width: 768px) {
     .logo-item img {
-        height: auto;
+        height: 120px;
         max-width: 90vw;
     }
 }
