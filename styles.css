@@ -488,19 +488,19 @@ nav a:hover::after {
     );
 }
 
-/* Recognition Section */
-.recognition {
+/* Impact Section */
+.impact {
     padding: 2rem 2rem;
     background: var(--white);
     overflow: hidden;
 }
 
-.recognition-content {
+.impact-content {
     max-width: 1400px;
     margin: 0 auto;
 }
 
-.recognition h2 {
+.impact h2 {
     text-align: center;
     font-size: 1.5rem;
     font-weight: 500;
@@ -851,7 +851,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .recognition {
+    .impact {
         overflow: visible;
     }
 }
