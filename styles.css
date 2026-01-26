@@ -914,4 +914,15 @@ footer {
     .nav-links.active {
         display: flex;
     }
+    
+    .hero {
+        margin-top: 140px;  /* Increase for taller mobile header */
+        padding-top: 2rem;   /* Add extra padding */
+    }
+    
+    .hero-text h1 {
+        font-size: 2.5rem;   /* Make smaller for mobile */
+        line-height: 1.2;
+    }
+
 }
