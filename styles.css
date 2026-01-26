@@ -81,10 +81,23 @@ header {
     position: relative;
 }
 
-
 .logo img {
     height: 120px;
     width: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 1.75rem;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 nav ul {
@@ -673,10 +686,11 @@ footer {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer-brand img {
-    height: 45px;
-    width: auto;
+.footer-brand-text {
+    font-size: 1.5rem;
+    font-weight: 600;
     margin-bottom: 1rem;
+    color: var(--white);
 }
 
 .footer-about {
@@ -714,59 +728,6 @@ footer {
     padding-top: 2rem;
     color: rgba(255, 255, 255, 0.5);
     font-size: 0.9rem;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .hero-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-
-    .hero-visual {
-        height: 400px;
-    }
-
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .about-content,
-    .contact-container {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-text h1 {
-        font-size: 3rem;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    nav ul {
-        gap: 1.5rem;
-        font-size: 0.9rem;
-    }
-
-    .section-header h2 {
-        font-size: 2.5rem;
-    }
-
-    .cta-buttons {
-        flex-direction: column;
-    }
-
-    .btn {
-        text-align: center;
-    }
 }
 
 /* Team Section */
@@ -816,83 +777,39 @@ footer {
     line-height: 1.7;
 }
 
+/* ========================================
+   RESPONSIVE DESIGN - TABLET
+   ======================================== */
+@media (max-width: 1024px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .hero-visual {
+        height: 400px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content,
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE
+   ======================================== */
 @media (max-width: 768px) {
-    .team-member {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
-
-    .team-photo {
-        width: 120px;
-        height: 120px;
-    }
-}
-
-/* MOBILE-ONLY STABILITY FIX — DO NOT TOUCH DESKTOP */
-@media (max-width: 768px) {
-
-    /* Prevent horizontal reflow from off-screen decorative cards */
-    .floating-card {
-        display: none;
-    }
-
-    /* Prevent mobile Safari jitter from animated fixed background */
-    .grid-background {
-        animation: none;
-        transform: none;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .logo-item img {
-        height: 120px;
-        max-width: 90vw;
-    }
-}
-
-@media (max-width: 768px) {
-    .impact {
-        overflow: visible;
-    }
-}
-
-@media (max-width: 768px) {
-    .logo-scroll {
-        flex-direction: column;
-        gap: 2rem;
-    }
-}
-
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navbar {
-    position: relative;
-}
-
-.nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-}
-
-/* Hide hamburger on desktop */
-.nav-toggle {
-    display: none;
-    font-size: 1.75rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
+    /* Navigation */
     .nav-toggle {
         display: block;
     }
@@ -914,40 +831,111 @@ footer {
     .nav-links.active {
         display: flex;
     }
-    
-    .hero {
-        margin-top: 140px;  /* Increase for taller mobile header */
-        padding-top: 2rem;   /* Add extra padding */
+
+    nav ul {
+        gap: 1.5rem;
+        font-size: 0.9rem;
     }
-    
+
+    /* Hero Section */
+    .hero {
+        margin-top: 140px;
+        padding-top: 2rem;
+    }
+
     .hero-text h1 {
-        font-size: 2.5rem;   /* Make smaller for mobile */
+        font-size: 2.5rem;
         line-height: 1.2;
     }
 
+    /* Floating Cards */
+    .floating-card {
+        display: none;
+    }
 
+    /* Background Grid */
+    .grid-background {
+        animation: none;
+        transform: none;
+    }
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header h2 {
+        font-size: 2.5rem;
+    }
+
+    /* CTA Buttons */
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        text-align: center;
+    }
+
+    /* Impact Section - Logos */
+    .impact {
+        overflow-x: auto;
+        overflow-y: visible;
+        -webkit-overflow-scrolling: touch;
+        padding: 2rem 1rem;
+    }
+
+    .logo-scroll {
+        flex-direction: row;
+        gap: 1.5rem;
+        overflow-x: auto;
+        padding: 1rem;
+        justify-content: flex-start;
+    }
+
+    .logo-item {
+        flex-shrink: 0;
+        min-width: auto;
+    }
+
+    .logo-item img {
+        height: 80px;
+        max-width: 250px;
+    }
+
+    /* Team Section */
+    .team-member {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .team-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Overflow Control */
     body {
         overflow-x: hidden;
     }
-    
+
     .hero-content,
     .services,
     .about-content,
-    .contact-container,
-    .impact-content {
+    .contact-container {
         padding-left: 1rem;
         padding-right: 1rem;
         max-width: 100vw;
-        overflow-x: hidden;
+        box-sizing: border-box;
     }
-    
+
     .data-viz {
         max-width: 100%;
         overflow: hidden;
     }
-    
+
     .viz-bar {
         max-width: 100%;
     }
-
 }
