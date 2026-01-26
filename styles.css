@@ -879,28 +879,25 @@ footer {
 
     /* Impact Section - Logos */
     .impact {
-        overflow-x: auto;
-        overflow-y: visible;
-        -webkit-overflow-scrolling: touch;
-        padding: 2rem 1rem;
+        overflow: visible;
     }
 
     .logo-scroll {
-        flex-direction: row;
-        gap: 1.5rem;
-        overflow-x: auto;
-        padding: 1rem;
-        justify-content: flex-start;
+        flex-direction: column;
+        gap: 2rem;
     }
 
     .logo-item {
-        flex-shrink: 0;
-        min-width: auto;
+        max-width: 90vw;
+        width: 100%;
     }
 
     .logo-item img {
-        height: 80px;
-        max-width: 250px;
+        height: auto !important;
+        width: 100% !important;
+        max-width: 90vw !important;
+        max-height: 200px !important;
+        object-fit: contain !important;
     }
 
     /* Team Section */
